@@ -38,22 +38,22 @@ const Home = () => {
             <ul className="flex items-center justify-center gap-6 text-sm py-3">
               <li>
                 <Link to="/" className="hover:text-yellow-300 transition-colors">
-                  Home
+                  Дом
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="hover:text-yellow-300 transition-colors">
-                  about
+                  О нас
                 </Link>
               </li>
               <li>
                 <Link to="/buildings" className="hover:text-yellow-300 transition-colors">
-                  Buildings
+                  Хозтовари
                 </Link>
               </li>
               <li>
                 <Link to='/workwb' className='hover:text-yellow-300 transition-colors'>
-                  WorkWb
+                  Работа в WB
                 </Link>
               </li>
             </ul>

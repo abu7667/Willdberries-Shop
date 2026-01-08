@@ -9,6 +9,7 @@ import App from './App.jsx'
 import About from './pages/About.jsx';
 import Buildings from './pages/Buildings.jsx';
 import Workwb from './pages/Workwb.jsx';
+import Login from './pages/Login.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/workwb",
     element: <Workwb />
+  },
+  {
+    path: "/login",
+    element: <Login />
   }
 ]);
 
