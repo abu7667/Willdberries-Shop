@@ -135,7 +135,7 @@ const Home = () => {
                 <select
                   value={language}
                   onChange={(e) => setLanguage(e.target.value)}
-                  className="bg-transparent outline-none cursor-pointer"
+                  className="bg-transparent outline-none cursor-pointer text-black"
                 >
                   <option value="uz">Uzb</option>
                   <option value="ru">Rus</option>
@@ -195,10 +195,10 @@ const Home = () => {
         </div>
       </header>
       <div className="swiper">
-        Mrabdulaziz
+        {/* Mrabdulaziz */}
       </div>
       <section>
-        muhammadli 
+        {/* muhammadli  */}
       </section>
     </>
   )
