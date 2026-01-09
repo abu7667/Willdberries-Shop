@@ -194,6 +194,7 @@ const Home = () => {
           </div>
         </div>
       </header>
+      
       <div className="swiper">
         {/* Mrabdulaziz */}
       </div>
