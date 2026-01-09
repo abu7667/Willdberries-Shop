@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
@@ -315,4 +313,3 @@ const Home = () => {
 };
 
 export default Home;
->>>>>>> d37b7bda6e31fee4733f14302fa8ea248b6715bc

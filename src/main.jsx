@@ -10,6 +10,8 @@ import About from './pages/About.jsx';
 import Buildings from './pages/Buildings.jsx';
 import Workwb from './pages/Workwb.jsx';
 import Login from './pages/Login.jsx';
+import Cart from './pages/Cart.jsx';
+import Product from './pages/Product.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />
+  },
+  {
+    path: "/cart",
+    element: <Cart />
+  },
+  {
+    path: "/product/:id",
+    element: <Product />
   }
 ]);
 

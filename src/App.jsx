@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Home from './pages/Home'
+import Section from './pages/Section'
 import Footer from './components/Footer'
 
 function App() {
@@ -8,8 +9,7 @@ function App() {
 
   return (
     <>
-     <Home />
-     <Footer />
+      <Home />
     </>
   )
 }

@@ -101,7 +101,7 @@ const Home = () => {
             <div className="flex items-center gap-6 flex-1 justify-center">
               {/* Logo */}
               <Link to="/" className="flex-shrink-0">
-                <img className='w-50' src={images[0].img} alt="" />
+                <img className='w-1' src={images[0].img} alt="" />
               </Link>
 
               {/* Search Bar */}
