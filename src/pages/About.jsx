@@ -2,6 +2,27 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 
+const Counter = ({ target, duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const startTime = Date.now();
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      setCount(Math.floor(target * progress));
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [target, duration]);
+
+  return count;
+};
+
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,7 +91,7 @@ const Home = () => {
               </li>
               <li>
                 <Link to="/buildings" className="hover:text-yellow-300 transition-colors">
-                  Хозтовари
+                  Хозтовары
                 </Link>
               </li>
               <li>
@@ -242,19 +263,19 @@ const Home = () => {
           {/* Statistics - 4 ta katta raqam */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
             <div className="bg-base-200 rounded-2xl p-8 text-center">
-              <div className="text-5xl font-bold text-primary mb-2">100+</div>
+              <div className="text-5xl font-bold text-primary mb-2"><Counter target={100} />+</div>
               <p className="text-base-content/70">Миллионов товаров</p>
             </div>
             <div className="bg-base-200 rounded-2xl p-8 text-center">
-              <div className="text-5xl font-bold text-secondary mb-2">50+</div>
+              <div className="text-5xl font-bold text-secondary mb-2"><Counter target={50} />+</div>
               <p className="text-base-content/70">Тысяч продавцов</p>
             </div>
             <div className="bg-base-200 rounded-2xl p-8 text-center">
-              <div className="text-5xl font-bold text-accent mb-2">10 000+</div>
+              <div className="text-5xl font-bold text-accent mb-2"><Counter target={10000} duration={2500} /> </div>
               <p className="text-base-content/70">Пунктов выдачи</p>
             </div>
             <div className="bg-base-200 rounded-2xl p-8 text-center">
-              <div className="text-5xl font-bold text-primary mb-2">2004</div>
+              <div className="text-5xl font-bold text-primary mb-2"><Counter target={2004} duration={3000} /></div>
               <p className="text-base-content/70">Год основания</p>
             </div>
           </div>
